@@ -13,55 +13,50 @@ body{
   padding: 0 20px;
   box-sizing: border-box; }
 
-#menu {
-  width: 200px;
-  padding: 10px;
-  position: fixed;
-  z-index: 5;
-  top: 100px;
-  right: 0;
-  background-color: $color-white;
-  color: #333333;
-  text-align: center;
-  box-shadow: 1px 1px 80px -5px $color-main;
-  transition: transform .5s;
-  transform: translateX(110%)
-}
-
-.menu-hr {
-  border: none;
-  height: 3px;
-  background-color:$color-main;
-  margin: 15px 0 15px 0
-}
-
-.menu-title {
-  transition: color .5s;
-  text-transform: uppercase;
-
-  &:hover {
-  cursor: pointer;
-  color:$color-main
-}
-}
-
-.menu-nav {
-  list-style-type: none;
-  padding-left: 0;
-
-  a {
-    transition: color .5s;
-    text-decoration: none;
-    color: #333333;
-    text-transform: uppercase;
-    font-weight: bold;}
-
-    a:hover {
-      cursor: pointer;
-      color:$color-main;
-    }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 20;
+  }
   
-}
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #swiper-container1 {
+    transition: margin-left .5s;
+
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
 
 
 .section {
@@ -72,7 +67,7 @@ body{
 
 #section-1 {
   width: 100%;
-  min-height: 120vh;
+  min-height: 100vh;
   background-image: url(../img/bg-main.jpg);
   background-position: center;
   background-size: cover;
@@ -192,7 +187,14 @@ body{
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 116.67px
+  text-decoration: none;
+  width: 116.67px;
+
+  & a{
+    text-decoration: none;
+  }
+
+
 }
 
 .read-more_container:hover .read-more_text {
@@ -206,6 +208,7 @@ body{
 
 .read-more_text {
   text-transform: uppercase;
+
   font-weight: bold;
   color: $color-white;
   margin: 0;
@@ -239,6 +242,8 @@ body{
 
   & a{
     text-decoration: none;
+    color: grey;
+    transition: color .5s;
 
     &:visited{
       color: grey;
@@ -247,7 +252,8 @@ body{
 
     &:hover{
       color: $color-main;
-      cursor: pointer
+      cursor: pointer;
+      transition: color .5s;
   }}
 }
 
@@ -346,9 +352,14 @@ body{
 .scroll-down_muse {
   height: 29px;
   width: auto;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  transition: all 0.5s ease;
+
+  &:hover{
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+  }
 }
 
 .scroll-down_inner-container {
@@ -407,7 +418,7 @@ body{
   line-height: 1;
   text-transform: uppercase;
   font-weight: bold;
-  color:$color-main;
+  color:$color-text;
   letter-spacing: 5px;
   font-size: 72px;
   font-weight: 900;
@@ -415,7 +426,7 @@ body{
   text-transform: uppercase;
 
   span {
-    color:$color-text;
+    color:$color-main;
   }
 }
 
@@ -425,6 +436,8 @@ body{
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+
 
 .section-2_hr {
   width: 100%;
@@ -938,7 +951,7 @@ body{
 
 }
 
-.section-5_news-container {
+.section-5_news-container { 
   width: 100%;
   margin: 30px 10px 0 10px
 }
@@ -952,7 +965,7 @@ body{
   transition: color .5s
 }
 .news a{
-  text-decoration: none
+  text-decoration: none;
 }
 
 .news:hover .news-title {
@@ -1109,6 +1122,12 @@ body{
   color: grey;
   font-weight: bold;
   font-size: 12px
+}
+
+#map {
+  width: 100%;
+  min-height: 662px;
+  margin-bottom: 0;
 }
 
 .form {
@@ -1672,7 +1691,9 @@ input{
     font-size: 175px;
     letter-spacing: 164px;
     position: absolute;
-    left: -15%
+    left: -15%;
+    bottom: 110px;
+
   }
 
   .section-1_logo {
@@ -1749,7 +1770,6 @@ input{
     line-height: 1;
     left: 8.33333%;
     top: 135px;
-    letter-spacing: 30px
   }
 
   .section-2_description-container {
@@ -2073,9 +2093,6 @@ input{
   .scroll-down_line {
     height: 230px
   }
-
- 
-
   .section-2_main-title {
     position: absolute;
     margin: 0;
@@ -2084,12 +2101,10 @@ input{
     top: 150px;
     text-transform: uppercase;
     font-weight: bold;
-    color:$color-main;
-    letter-spacing: 30px
   }
 
   .section-6 {
-    min-height: 115vh;
+    min-height: 100vh;
     width: 100%;
     background-position: center;
     background-size: cover
@@ -2280,4 +2295,107 @@ input{
 .swiper-container {
   width: 100%;
   height: 400px;
+}
+
+.swiper-pagination{
+  left: 60px;
+  position: fixed !important;
+
+ 
+}
+.swiper-pagination-bullet{
+  width: 15px !important;
+  height: 15px !important;
+  margin-top: 10px !important;
+  
+
+  &-active{
+    background:white !important;
+  }
+}
+
+.swiper-container-vertical>.swiper-pagination-bullets {
+  width: 20px;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  display: none;
+}
+
+// SKILS // 
+
+.progress-bar {
+  margin-bottom: 1rem;
+  background-color: lightgray;
+  border-radius: 1.25em;
+  width: 300px;
+  height: 16px;
+  display: inline-block;
+}
+.progress-value {
+  background-color: #673ab7;
+  transition: 0.3s all linear;
+  border-radius: 1.25em;
+  height: 16px;
+  display: inline-block;
+  animation: progress 3s ease-in-out forwards;
+  -webkit-animation: progress 3s ease-in-out forwards;
+}
+.progress-value.green {
+  background-color: #4CAF50;
+  animation: progress-3 3s ease-in-out forwards;
+  -webkit-animation: progress-3 3s ease-in-out forwards;
+}
+.progress-value.yellow {
+ background-color: #ff9800;
+animation: progress-2 3s ease-in-out forwards;
+  -webkit-animation: progress-2 3s ease-in-out forwards;
+}
+/* animation */
+@keyframes progress {
+from {
+  width: 0;
+}
+to {
+  width: 55%;
+}
+}
+@-webkit-keyframes progress {
+from {
+  width: 0;
+}
+to {
+  width: 55%;
+}
+}
+@keyframes progress-2 {
+from {
+  width: 0;
+}
+to {
+  width: 70%;
+}
+}
+@-webkit-keyframes progress-2 {
+from {
+  width: 0;
+}
+to {
+  width: 70%;
+}
+}
+@keyframes progress-3 {
+from {
+  width: 0;
+}
+to {
+  width: 90%;
+}
+}
+@-webkit-keyframes progress-3 {
+from {
+  width: 0;
+}
+to {
+  width: 90%;
+}
 }
