@@ -1,18 +1,45 @@
-$(document).ready(function () {
-    //initialize swiper when document ready
-    var mySwiper = new Swiper ('.swiper-container', {
-      // Optional parameters
-     
-      loop: true
-    })
+// Swipers // 
 
+$(document).ready(function () {
+    
     var swiper = new Swiper('.swiper-container1', {
         direction: 'vertical',
+        swipe: true,
         pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
+            el: '.swiper-pagination',
+            clickable: true,
         },
+        initialSlide: 0,
+        mousewheel: {
+            invert: false,
+        },
+        
+    });
+    swiper.on('slideChangeTransitionStart', function() {
+        console.log(swiper.realIndex).
+        if (swiper.realIndex) > 0;{
+            $('.swiper-pagination-bullet-active').addClass('.swiper-pagination-bullet-active-black');
+        }
+    });
+    
+    
+    var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      loop: true
+    })
+    
+
+      $('#mySidenav').on('click', 'a', function (event) {
+          event.preventDefault();
+          console.log($(event.target).index());
+        //   $(".swiper-container1 .active").removeClass('active');
+        //   $(this).addClass('active');
+          swiper.slideTo( $(event.target).index() );
       });
+
+   
+
+      
   });
   
 
@@ -55,6 +82,7 @@ function random(min, max) {
 setTimeout(function() {
     document.querySelector('progress').value = random(10, 100);
 }, 0);
+
 /* MAP */ 
 
 var map, marker,

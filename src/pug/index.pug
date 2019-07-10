@@ -14,11 +14,11 @@ html(lang="en")
         section#menu
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#section-2">About</a>
-                <a href="#section-3">Services</a>
-                <a href="#section-4">Portfolio</a>
-                <a href="#section-5">Blog</a>
-                <a href="#section-6">Contact</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
             </div>
         .swiper-container1#swiper-container1
             .swiper-wrapper
@@ -26,13 +26,18 @@ html(lang="en")
                     // Section main
                     section#section-1.section.section-1
                         .container-custom
+                            <div class="video-background">
+                                <div class="video-foreground">
+                                    <iframe src="https://www.youtube.com/embed/xFgaO4D-yVM?start=4&autoplay=1&controls=0&showinfo=0&rel=0&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
                             h1.section-1_main-text vanzer
                             nav.upper-nav
                                 img.section-1_logo(src='img/logo-main.png' alt='Logo')
                                 <span style="font-size:30px;cursor:pointer" onclick="openNav()">
                                     i.hamburger-menu.fa.fa-bars
                                 </span>
-                            //index.pugul.left-nav
+                            //ul.left-nav
                                 li
                                     h1.left-nav_counter.left-nav_text-white 01
                                 li
@@ -56,7 +61,7 @@ html(lang="en")
                                 hr.section-1_hr
                                 .u-cf
                                 .read-more_container
-                                    a(href="#section-2")
+                                    a(href="#")
                                         h6.read-more_text read more
                                             i.read-more_arrow.fas.fa-long-arrow-alt-right
                             ul.right-nav
@@ -69,7 +74,7 @@ html(lang="en")
                                 li
                                     a.fab.fa-instagram(href="https://www.instagram.com/kimster_1711/")(target="_blank")
                             .scroll-down_container
-                                a(href="#section-2")
+                                a(href="#")
                                     img.scroll-down_muse(src='img/scrolll-main.png' alt='Computer mouse')
                                 .scroll-down_inner-container
                                     .scroll-down_line
