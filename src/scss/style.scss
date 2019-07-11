@@ -1177,6 +1177,7 @@ textarea {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    min-height: 100vh;
     
     &:before{
       content: 'V';
@@ -1205,7 +1206,9 @@ textarea {
     margin-top: 36px;
     padding-left: 0;
   }
-
+  #section-2{
+    min-height: 100vh;
+  }
   .section-2_photo {
     display: none;
  
