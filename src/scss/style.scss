@@ -1177,8 +1177,6 @@ textarea {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
-    min-height: 100vh;
-    height:100vh;
     
     &:before{
       content: 'V';
@@ -1199,8 +1197,6 @@ textarea {
   }
   .section-1_main-title{
     font-size: 50px;
-    padding-top: 15px;
-
   }
   .section-1_description{
     font-size: 14;
@@ -1209,9 +1205,7 @@ textarea {
     margin-top: 36px;
     padding-left: 0;
   }
-  #section-2{
-    height: 100vh;
-  }
+
   .section-2_photo {
     display: none;
  
@@ -1358,6 +1352,8 @@ textarea {
   }
   .section-2_main-title{
     font-size: 43px;
+    padding-top: 40px;
+    line-height: 1;
   }
 
   .section-3_nav {
