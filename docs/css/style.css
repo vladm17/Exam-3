@@ -1266,12 +1266,14 @@ textarea {
   .section-1_description {
     font-size: 14; }
   .right-nav {
-    margin-top: 36px;
+    margin-top: 20px;
     padding-left: 0; }
   .section-2_photo {
     display: none; }
   .section-2_main-title {
-    font-size: 32px; }
+    font-size: 32px;
+    padding-top: 40px;
+    line-height: 1; }
   .progress-bar {
     width: 253px !important; }
   .section-2_description-container {
@@ -1410,9 +1412,7 @@ textarea {
   .right-nav {
     margin-top: 100px; }
   .section-2_main-title {
-    font-size: 43px;
-    padding-top: 40px;
-    line-height: 1; }
+    font-size: 43px; }
   .section-3_nav {
     margin-top: 30px;
     text-align: center; }
