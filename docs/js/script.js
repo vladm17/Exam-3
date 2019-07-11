@@ -13,29 +13,68 @@ $(document).ready(function () {
         mousewheel: {
             invert: false,
         },
+        /*breakpoints: {
+
+            320: {
+                
+                noSwiping: false,
+                allowSlidePrev: true,
+                allowSlideNext: true
+            },
+    
+            992: {
+            
+                noSwiping: false,
+                allowSlidePrev: true,
+                allowSlideNext: true
+            },
+    
+            1024: {
+        
+                noSwiping: true,
+                allowSlidePrev: false,
+                allowSlideNext: false
+            }
+    
+        }*/
         
     });
     swiper.on('slideChangeTransitionStart', function() {
-        console.log(swiper.realIndex).
-        if (swiper.realIndex) > 0;{
-            $('.swiper-pagination-bullet-active').addClass('.swiper-pagination-bullet-active-black');
+        // console.log(swiper.realIndex);
+        switch (swiper.realIndex) {
+            case 1:
+            case 4:
+                $('.swiper-pagination-bullet-active').addClass('swiper-pagination-bullet-active-black')
+                break;
+            default:
+                $('.swiper-pagination-bullet-active').removeClass('swiper-pagination-bullet-active-black')
+                break;
         }
     });
     
     
     var mySwiper = new Swiper ('.swiper-container', {
       // Optional parameters
-      loop: true
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     })
     
 
       $('#mySidenav').on('click', 'a', function (event) {
           event.preventDefault();
           console.log($(event.target).index());
-        //   $(".swiper-container1 .active").removeClass('active');
-        //   $(this).addClass('active');
           swiper.slideTo( $(event.target).index() );
+         
       });
+
+      $('.closebtn')
+        .click(function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+});
 
    
 
