@@ -4,7 +4,7 @@ $(document).ready(function () {
     
     var swiper = new Swiper('.swiper-container1', {
         direction: 'vertical',
-        swipe: true,
+        allowSlidePrev: true,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,

@@ -1248,7 +1248,8 @@ textarea {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
-    min-height: 100vh; }
+    min-height: 100vh;
+    height: 100vh; }
     #section-1:before {
       content: 'V';
       color: rgba(255, 66, 0, 0.5);
@@ -1271,7 +1272,7 @@ textarea {
     margin-top: 36px;
     padding-left: 0; }
   #section-2 {
-    min-height: 100vh; }
+    height: 100vh; }
   .section-2_photo {
     display: none; }
   .section-2_main-title {
